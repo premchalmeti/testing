@@ -1,0 +1,6 @@
+2021-05-28 16:30:43,789 | device.Command | __init__() | DEBUG | device delete <device_ip> | Plain cmd: device delete
+2021-05-28 16:30:43,867 | device.Command | __init__() | DEBUG | device delete <device_ip> | Using clish instance: <clish_mgr.ClishManager object at 0x00000219F665BC10>
+2021-05-28 16:30:43,867 | device.Command | __init__() | DEBUG | device show [<device_ip>] | Plain cmd: device show
+2021-05-28 16:30:43,869 | device.Command | __init__() | DEBUG | device show [<device_ip>] | Using clish instance: <clish_mgr.ClishManager object at 0x00000219F6949F10>
+2021-05-28 16:30:43,873 | device.Command | prepare_executable_cmd() | DEBUG | device show [<device_ip>] | complete executable cmd: ['device', 'show', '']
+2021-05-28 16:30:43,873 | device.Command | run() | INFO | device show [<device_ip>] | Running executable cmd: ['device', 'show', '']

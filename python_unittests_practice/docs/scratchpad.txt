@@ -1,0 +1,29 @@
+Topics to cover:
+    - testing frameworks available
+    - why python unittest?
+    - Testing terminologies,
+        - test fixture
+        - test case
+        - test suite
+        - test runner
+    - topics to cover:
+        - test case, extending unittest.TestCase for convenient setUp() and tearDown()
+        - setUp() and tearDown()
+        - test suite
+        - Custom SequentialTestLoader class
+        - object mocking importance and use case
+    - best practices
+
+
+
+Testing: improves software quality
+
+I bet you must have heard the above saying/idiom.
+
+Writing comprehensive unit tests for your code is equally important as writing your code but is often overlooked in rapid developments.
+
+In my opinion, to grow and levelup your game it is important to look at standardizing your development.
+
+with increasing experience we have to work on how to standardize our developments.
+
+

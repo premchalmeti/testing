@@ -1,0 +1,17 @@
+1624120190949	geckodriver	INFO	Listening on 127.0.0.1:51871
+1624120190955	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyo15wi"
+Gtk-Message: 21:59:50.981: Failed to load module "appmenu-gtk-module"
+1624120191307	Marionette	INFO	Marionette enabled
+Gtk-Message: 21:59:51.879: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 21:59:52.117: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyo15wi/search.json.mozlz4", (void 0)))
+Gtk-Message: 21:59:53.143: Failed to load module "appmenu-gtk-module"
+1624120194958	Marionette	INFO	Listening on port 43369
+1624120194984	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1001))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.child4/pagestyle24 (resource://devtools/server/actors/page-style.js:1001:5)", "resource://devtools/shared/protocol/Front.js", 365))
+1624120276453	Marionette	INFO	Stopped listening on port 43369
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

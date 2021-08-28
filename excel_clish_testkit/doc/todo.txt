@@ -1,0 +1,16 @@
+- add assertions [Done]
+- add logs [Done]
+- update test result and cmd output in excel [Done]
+- call setup hook [Done]
+- call cleanup hook [Done]
+- add comments
+- add cmd lookups
+    - exact cmd name [operand: "admin group modify role add", hooks: admin_group_modify_role_add] [done]
+    - cmd index [starts from 0] [cmd1, cmd2]
+    - excel name column [admin_group_add, admin_group_delete]
+
+- TestLoader [for test loaders] [v2]
+    - ExcelLoader
+    - YamlLoader
+
+- populate the setup() and cleanup() hooks with metadata

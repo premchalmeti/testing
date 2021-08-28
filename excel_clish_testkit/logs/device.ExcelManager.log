@@ -1,0 +1,9 @@
+2021-05-28 16:30:43,770 | device.ExcelManager | __init__() | DEBUG | Using excel C:\Users\premkumar.chalmeti\Documents\workspace\excel_clish_testkit\tests\device.xlsx testcase path
+2021-05-28 16:30:43,770 | device.ExcelManager | __init__() | DEBUG | 30 columns will be used for CMD
+2021-05-28 16:30:43,771 | device.ExcelManager | get_tests() | DEBUG | Loading excel test case
+2021-05-28 16:30:43,778 | device.ExcelManager | get_tests() | DEBUG | Excel headers: ['LEVEL_1', 'LEVEL_2', 'LEVEL_3', 'LEVEL_4', 'LEVEL_5', 'LEVEL_6', 'LEVEL_7', 'LEVEL_8', 'LEVEL_11', 'LEVEL_12', 'LEVEL_13', 'LEVEL_14', 'LEVEL_15', 'LEVEL_16', 'LEVEL_17', 'LEVEL_18', 'LEVEL_19', 'LEVEL_20', 'LEVEL_21', 'LEVEL_22', 'LEVEL_23', 'LEVEL_24', 'LEVEL_25', 'LEVEL_26', 'LEVEL_27', 'LEVEL_28', 'LEVEL_29', 'LEVEL_30', 'Test Result', 'Success Output', 'Error Output', 'Skip']
+2021-05-28 16:30:43,786 | device.ExcelManager | get_tests() | DEBUG | Found test: ['device', 'add', '<device_ip>', '<subnet>', '<gateway>', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, 'Y']
+2021-05-28 16:30:43,786 | device.ExcelManager | get_tests() | DEBUG | Found test: ['device', 'delete', '<device_ip>', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2021-05-28 16:30:43,786 | device.ExcelManager | get_tests() | DEBUG | Found test: ['device', 'show', '[<device_ip>]', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2021-05-28 16:30:43,925 | device.ExcelManager | update_test_result() | INFO | Updating test results
+2021-05-28 16:30:43,944 | device.ExcelManager | save_excel() | INFO | device | Test Excel Updated!

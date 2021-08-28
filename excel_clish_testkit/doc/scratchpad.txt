@@ -1,0 +1,87 @@
+1. read excel / yaml / any better src
+    TestRunner [v2]
+        testLoader
+            - excelManager
+                - validate_tc
+                - generate_sample_tc
+            - yamlManager
+                - validate_tc
+                - generate_sample_tc
+2. parse cmd: 
+3. lookup operands
+4. lookup setup hook
+    - if setup hook exists
+        - call setup hook
+5. run testcase [print results, update logs]
+6. lookup cleanup hook
+    - if cleanup hook exists
+        - call cleanup hook
+
+
+- features
+    - mock_run [Done]
+    - read_only run
+
+Locations:
+- Excel TC location:    tests/
+- TC setup hooks:       hooks/setup/
+- TC cleanup hook:      hooks/cleanup/
+- TC operands:          /operands/admin.yml
+
+
+cmd lookup strategy:
+    - exact cmd name [admin_group_modify_role_add]
+    - name column [admin_group_add, admin_group_delete]
+    - cmd index [starts from 0] [cmd1, cmd2]
+
+
+name based find and run
+    admin module has,
+    - tests/
+        admin.xlsx
+    - operands/
+        admin.yml
+    - hooks/
+        setup/
+            admin.py
+        cleanup/
+            admin.py
+    - logs/
+        admin.log
+
+
+components:
+    test_runner.py
+        Main entrypoint for framework expose 2 main methods, `run_all()` and `run(tcname)`
+        - `run_all()`` scans Excel testcases in `config.TEST_SRC_DIR` location which internally call `run(tcname)`
+        - Uses with `ExcelManager` to parse TC excel
+        - Prepare `TestCase` and run `TestCase().test()`
+        - update TestCase results
+    excel_mgr.py
+        Parse the `config.CURRENT_TC` excel file and is responsible for following things,
+        - read currently running TC (`constants.CURRENT_TC`)
+        - return test_rows to test_runner instance
+        - executes tests
+        - update test rows with results and update TC excel
+    testcase.py
+        The `TestCase` class is represents the tests(rows) in the given excel TC.
+        Does the following things,
+        - The actual class which do the testcase assertions
+        - The command is passed to `Command()` obj
+        - call setup hook before test case run
+        - test():
+            - calls `Command().run()`
+            - and `do_assertions()`
+        - call cleanup hook after test case run
+    command.py
+        A Command class is the actual executable entity of test
+        - use `OperandManager` to get operands
+        - Executes command using `ClishManager`
+        - Return result to testcase for assertions
+    operand_mgr.py
+        This class is used by command to read operands from operand files.
+        Does the following,
+        - read `config.CURRENT_TC`.yml file in `config.OPERANDS_DIR` location
+        - takes cmd as argument
+        - do a lookup operand lookup
+        - return complete cmd to Command

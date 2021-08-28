@@ -1,0 +1,5 @@
+envrobot/
+venv/
+**.pyc
+__pycache__/
+practice/WebDemo/

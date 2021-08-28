@@ -1,0 +1,5 @@
+2021-05-28 16:30:43,769 | testrunner | run_all() | INFO | Looking for tests in C:\Users\premkumar.chalmeti\Documents\workspace\excel_clish_testkit\tests location
+2021-05-28 16:30:43,787 | testrunner | run() | WARNING | device add <device_ip> <subnet> <gateway> | Test is skipped
+2021-05-28 16:30:43,867 | testrunner | run() | WARNING | device delete <device_ip> | Test is not read only. READ_ONLY flag is enabled
+2021-05-28 16:30:43,869 | testrunner | run() | INFO | Running device show [<device_ip>] test
+2021-05-28 16:30:43,925 | testrunner | run() | INFO | Updating device test results

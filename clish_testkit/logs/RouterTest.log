@@ -1,0 +1,28 @@
+2021-05-15 00:21:28,503 | RouterTest | INFO | Testing test_router_enable
+2021-05-15 00:21:28,504 | RouterTest | INFO | Executing "router enable"
+2021-05-15 00:21:28,504 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 
+2021-05-15 00:21:28,504 | RouterTest | INFO | Testing test_show_ip
+2021-05-15 00:21:28,504 | RouterTest | INFO | Setting up TC, calling _setup_test_show_ip()
+2021-05-15 00:21:28,504 | RouterTest | INFO | Executing "router enable"
+2021-05-15 00:21:28,505 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 
+2021-05-15 00:21:28,505 | RouterTest | INFO | Executing "router ip address 192.168.1.1 255.255.255.0"
+2021-05-15 00:21:28,514 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 
+2021-05-15 00:21:28,515 | RouterTest | INFO | Executing "show ip"
+2021-05-15 00:21:28,516 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 
+2021-05-15 00:21:28,516 | RouterTest | INFO | Cleaning up TC, calling _cleanup_test_show_ip()
+2021-05-15 00:21:28,517 | RouterTest | INFO | Executing "router ip unset"
+2021-05-15 00:21:28,517 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 
+2021-05-15 00:21:28,518 | RouterTest | INFO | Executing "router disable"
+2021-05-15 00:21:28,519 | RouterTest | INFO | 
+Stdout: {"header": {"status": "SUCCESS"}} 
+Stderr: 

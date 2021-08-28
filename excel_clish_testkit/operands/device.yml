@@ -1,0 +1,7 @@
+device add:
+  device_ip: 10.221.44.251
+  subnet: 255.255.0.0
+  gateway: 10.2.1.151
+
+device delete:
+  device_ip: 10.221.44.251

@@ -1,0 +1,14 @@
+1624199189189	geckodriver	INFO	Listening on 127.0.0.1:58479
+1624199190142	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTfEQff"
+Gtk-Message: 19:56:30.167: Failed to load module "appmenu-gtk-module"
+1624199190992	Marionette	INFO	Marionette enabled
+Gtk-Message: 19:56:31.836: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 19:56:32.184: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTfEQff/search.json.mozlz4", (void 0)))
+Gtk-Message: 19:56:33.602: Failed to load module "appmenu-gtk-module"
+1624199195663	Marionette	INFO	Listening on port 42631
+1624199196022	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624199200019	Marionette	INFO	Stopped listening on port 42631
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

@@ -1,0 +1,150 @@
+- open source test automation framework
+- used for test automation and robotic process automation [RPA]
+- implemented in python
+- runs on jython and ironpython
+- initially developed at Nokia networks and open sourced in 2008
+- framework for acceptance testing and acceptance test-driven development
+- keyword-driven testing
+
+
+- modular architecture
+- os and application independent
+- extensible with bundled and self-made libs
+
+- testcases can be in .html, .xhtml, .htm, .tsv, .txt, .rst, .rest or .robot extensions
+- testcases in directories are test suites
+
+- data is defined in files
+- file contains tests or tasks creates a suite
+
+
+installation:
+    - pip install robotframework
+
+
+links:
+    - blog
+        https://www.blazemeter.com/blog/robot-framework-the-ultimate-guide-to-running-your-tests
+    - site:
+        https://robotframework.org/#libraries
+    - doc:
+        http://robotframework.org/robotframework/#user-guide
+        https://robot-framework.readthedocs.io/en/latest/
+        https://www.slideshare.net/pekkaklarck/robot-framework-introduction
+    - taurus
+        https://gettaurus.org/?utm_source=blog&utm_medium=BM_blog&utm_campaign=robot-framework-the-ultimate-guide-to-running-your-tests
+
+    - quickstart:
+        https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst
+    - WebDemo:
+        https://github.com/robotframework/WebDemo
+
+    - dos and donts:
+        https://www.slideshare.net/pekkaklarck/robot-framework-dos-and-donts
+
+    - writing gud tc:
+        https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst
+
+    - selenium doc
+        https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
+
+    - Geckodriver link
+        https://github.com/mozilla/geckodriver/releases
+
+
+- test case fmt:
+
+
+    *** Settings ***
+    Documentation   <docstring>
+    ...
+    ...
+    ...
+    Suite Setup     <keyword>
+    Suite Teardown  <keyword>
+    Test Setup      <keyword>
+    Test Template   <keyword>
+    Resource        <other_robot_imports>
+    Library         <libs>
+
+
+    *** Variables ***
+    ${host}     localhost
+    ${url}      http://${host}:8080/
+
+    *** keywords ***
+    <user_keyword>
+        [Arguments] <argname>
+        
+
+    *** Test Cases ***
+    <tc_name>
+        keywords
+        [Teardown]  <teardown_keywords> # usually Close Browser
+
+
+Execution:
+- Run test suit folder:
+    robot login_tests/
+
+- Run individual testcase file
+    robot login_tests/valid_login.robot
+
+- Run individual test inside testcase file
+    robot --test InvalidUserName --loglevel DEBUG login_tests
+
+- Pass variable while running
+    robot --variable BROWSER:Chrome login_tests
+
+-N --name <name>
+    - set test suite name shows in report and log
+    - default is based on executed filename/directory
+    - eg: -N Google TC
+-D --doc <documentation>
+    -eg: D This is a Hello World testcase
+-M --metadata name:value *
+    - set metadata of the top level suite
+    - eg: --metadata Version:1.2
+-G --settag tag *
+-t --test name [alias --task name]
+    - select tests by name or long parent suite name `Parent.Test`
+    - name is case and space insensitive
+-s --suite name *
+    - select suites by name
+-i --include tag *
+    - include tests based on tags
+    - eg: --include foo -i bar*
+-e --exclude tag *
+    - exclude tests based on tags
+    - eg: --exclude foo -e bar*
+-v --variable name:value *
+    - eg: --variable str:Hello
+-V --variablefile path *
+    - yaml/py file and use :[colon] for multiple files
+    - eg: --variablefile path/vars.yaml --variablefile environment.py:testing
+-d --outputdir dir
+    - where to create output file
+-o --output file
+    - xml ouput file create location
+-l --log file
+    - html log file create location
+-r --report file
+    - html report file create location
+-L --loglevel level
+    eg: --loglevel DEBUG
+--dryrun
+    - verifies data and runs tests
+
+
+
+Setting default options:
+    - export ROBOT_OPTIONS="--outputdir results --suitestatlevel 2"
+
+
+After execution following files are created:
+    - log.html - human readable
+    - report.html - human readable
+    - output.xml 
+        - machine readable. for integration with other systems.
+        - Rebot tool [Robot Framework report and log generator]
+    - selenium-screenshot.png

@@ -1,0 +1,5 @@
+2021-05-28 16:30:43,873 | device.ClishManager | run() | INFO | Running /usr/bin/clish -u admin -c "device show "
+2021-05-28 16:30:43,874 | device.ClishManager | run() | INFO | user: admin
+2021-05-28 16:30:43,874 | device.ClishManager | run() | INFO | inputs: 
+2021-05-28 16:30:43,923 | device.ClishManager | run() | INFO | device show  | stdout: , stderr: The system cannot find the path specified.
+

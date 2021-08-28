@@ -1,0 +1,14 @@
+2021-05-28 16:30:43,867 | device.TestCase | __init__() | DEBUG | device delete <device_ip> | Testcase Initialized
+2021-05-28 16:30:43,869 | device.TestCase | __init__() | DEBUG | device show [<device_ip>] | Testcase Initialized
+2021-05-28 16:30:43,869 | device.TestCase | test() | INFO | device show [<device_ip>] | Running test
+2021-05-28 16:30:43,869 | device.TestCase | call_setup_hook() | INFO | device show [<device_ip>] | Calling Setup hook
+2021-05-28 16:30:43,869 | device.TestCase | _import_mod() | INFO | device show [<device_ip>] | Importing hooks.setup.device module
+2021-05-28 16:30:43,872 | device.TestCase | _call_hook() | INFO | device_show | No hook found
+2021-05-28 16:30:43,923 | device.TestCase | test() | ERROR | device show [<device_ip>] | Got stderr: The system cannot find the path specified.
+
+2021-05-28 16:30:43,923 | device.TestCase | do_assertions() | INFO | device show [<device_ip>] | Test result: Success
+2021-05-28 16:30:43,923 | device.TestCase | update_test_result() | DEBUG | device show [<device_ip>] | Updating test result in excel
+2021-05-28 16:30:43,923 | device.TestCase | set_output() | DEBUG | device show [<device_ip>] | Updating success output in excel
+2021-05-28 16:30:43,923 | device.TestCase | call_cleanup_hook() | INFO | device show [<device_ip>] | Calling Cleanup hook
+2021-05-28 16:30:43,923 | device.TestCase | _import_mod() | INFO | device show [<device_ip>] | Importing hooks.cleanup.device module
+2021-05-28 16:30:43,925 | device.TestCase | _call_hook() | INFO | device_show | No hook found

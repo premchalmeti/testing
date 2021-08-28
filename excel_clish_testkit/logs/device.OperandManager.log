@@ -1,0 +1,5 @@
+2021-05-28 16:30:43,790 | device.OperandManager | parse_operand_file() | INFO | device delete | Parsing C:\Users\premkumar.chalmeti\Documents\workspace\excel_clish_testkit\operands\device.yml operand file
+2021-05-28 16:30:43,867 | device.OperandManager | parse_operand_file() | INFO | device show | Parsing C:\Users\premkumar.chalmeti\Documents\workspace\excel_clish_testkit\operands\device.yml operand file
+2021-05-28 16:30:43,868 | device.OperandManager | get_cmd_operands() | WARNING | device show | operand specification not found
+2021-05-28 16:30:43,873 | device.OperandManager | get_operand() | DEBUG | device show | operand=[<device_ip>] plain_operand=device_ip
+2021-05-28 16:30:43,873 | device.OperandManager | get_operand() | INFO | device show | param=device_ip value=

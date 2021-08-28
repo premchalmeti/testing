@@ -1,0 +1,74 @@
+
+* Unit testing
+	- single component
+	- API testing
+	- function testing
+	- identify the test cases
+
+
+	integration testing:
+		- multiple components
+
+
+	Testrunner:
+		- unittest
+		- nose or nose2
+		- pytest
+
+	- unittest
+		- unittest test cases
+		- unittest test runner
+
+	unittest.mock
+
+# mocking objects
+
+unittest.mock => mock objects
+
+.side_effects => return any exceptions, errors [Done]
+.return_value => return value for mocked object [Done]
+.method_calls => [Done]
+.method_args => [Done]
+.assert_called_with() => [Done]
+.assert_called()    [Done]
+.assert_called_once() [Done]
+call_args =>
+call_args_list =>
+call_count =>
+method_calls => 
+
+
+# unit testing
+
+unittest.TestCase => base class for TestCase creation
+
+setUp() => prepare testcase execution data [called for each test method]
+
+test_<>() => test case checks
+
+tearDown() => release testcase data prepared [called for each test method]
+
+run(result=None) => run the tc and result is collected into result (TestResult) object
+
+test fixtures: preperation needed to perform testcase and cleanup
+
+test case: inividual unit of testing
+
+test suite: collection of testcases or testsuites
+
+test runner: tool orchestrates execution of tests
+    - TextTestRunner
+
+assertions:
+
+assertEqual: 
+    assertEquals: deprecated
+
+assertNotEqual
+assertRaises
+assertTrue
+assertFalse
+
+
+Execution:
+python -m unittest <file_name>.[[<test_case>].[<test_mtd>]]

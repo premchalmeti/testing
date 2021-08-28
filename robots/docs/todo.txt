@@ -1,0 +1,120 @@
+Basics:
+    - organizing project and folder structure
+        - logs/
+        - tests/
+        - conf/ [variables]
+        - keywords/ or resources/ [utility keywords]
+        - bin/ [binary dependencies]
+        - lib/ [library dependencies]
+
+    - naming conventions
+        - testcases [lowercase as case insensitive]
+        - variables/keyword Arguments [uppercase with underscores but are case insensitive]
+        - keywords [lowercase]
+        - libraries [camelcase]
+
+    - setting environment variables
+    - builtin keywords
+    - builtin libraries
+    - variables
+        1. scalar vars ($ prefix: ${URL})
+        2. list vars (@ prefix: @{results})
+        3. Dicotionaries vars (& prefix)
+        4. environment vars (% prefix)
+
+        - variable scope
+        - passing vars to keywords [$P{} in keyword and [Arguments] inside keyword]
+        - assign keyword output to variable [@{flights}=  Get WebElements    css:table[class='table']>tbody tr]
+        - supply script input data at runtime [using --variable <var>:value] [Done]
+    - Test cases/suites:
+        - tags, default and forced tags, execute by tags
+        - setups and teardown 
+            - testcase setup and teardown 
+            - suite setup and teardown
+            - initialization files [__init__.ext where ext can be .html, .xhtml, .htm, .tsv, .txt, .rst, .rest or .robot]
+                - init files can be put in test suite directory
+                - can't have TCs
+                - not all Settings are supported
+                - keywords/vars created/imported will not be available in lower level suites?
+                - used to provide common tags, documentation and setup/teardown
+        - add timeouts
+        - sections [Documentation, Resource, Library, Test cases, Variables, Keywords] [Done]
+        - relative path for files [Done]
+        - test suites [Done]
+        - set output folder | report folder | log folder [Done]
+    - script control flow:
+        - conditions [if/else]
+        - loops
+    - user defined keywords:
+        - user defined keywords
+        - with arg [ [Arguments], ${} placeholders]
+        - return values from keywords
+        - without arg [Done]
+        - moving keywords to resource files [Done]
+            - resource files contains all keywords without any testcases
+            - resource files can not have metadata Settings [suite teardown/tearup, tags]
+            - resource file can only be imported [using Resource directive] in testcases
+    - Miscellaneous keywords:
+        - take screenshot at runtime
+        - goto | go back | get location
+        - execute js at runtime
+        - perform mouse operations
+        - perform keyboard operations
+        - wait keyword commands
+        - handle multiple browser
+        - handle multiple tabs
+        - close all browsers [Close All Browsers] [Done]
+
+    - readability:
+        - functions
+        - procedural vs gherkin syntax
+        - page objects    
+    - Running tests
+        - run by tags [Done]
+        - execution by taurus tool
+        - robot vs pybot script running option
+        - available cmd options [Done]
+    - logging
+        - more detailed logs
+        - rebot log generator tool
+
+Miscellaneous:
+    - testing web app
+        - robots vs selenium
+        - Selenium2Library vs. SeleniumLibrary
+        - Element locators 
+            - [https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Locating%20elements]
+            - css
+            - xpath
+            - by id, name, class, link
+            - Browser test if selector is correct? [element section]
+        - Element interaction [Click, enter]
+            - textbox
+            - radio button
+            - list/dropdown
+            - dialogs [if open close]
+        - An Important IE Precondition Setting
+        - seleniumlibrary keywords
+        - Assertions
+            - making requests and checking responses
+            - new page opened 200, 4xx, 5xx responses
+            - page contains and should not contains
+            - page should contains element
+            - validate checkbox
+            - validate text on element
+            - validate title/element enable/visible
+            - dialog should be open
+            - new page should be opened
+        - waits and timeouts
+            - set selenium speed and sleep
+            - set and get selenium timeout
+            - implicitly wait
+    - testing console app/standalone scripts
+    - testing remote machines
+    - file handling
+    - custom library
+    - jenkins intergration
+    - git intergration
+    - json handling
+        - fetch and validate json
+    - data driven testing

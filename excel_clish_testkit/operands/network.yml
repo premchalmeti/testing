@@ -1,0 +1,2 @@
+network device ping:
+  ip: 10.221.44.251
